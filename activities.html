@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activities4Kids</title>
+  <style>
+    body {
+    background: url("templeofpixels.jpg");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+    }	  
+	
+    .sidenav {
+      height: 100%;
+      width: 199px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color:rgba(0, 0, 0, 0.5);
+      overflow-x: hidden;
+      padding-top: 20px;
+	  border-radius: 0 10px 10px 0;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+	  text-align: center;
+    }
+
+    .sidenav a:hover {
+      color: #303030;
+    }
+	
+  </style>
+  <script>
+    function toggleNav() {
+      var nav = document.getElementById("sidenav");
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
+      } else {
+        nav.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div dy styleid="sidenav" class="sidenav">
+    <a href="home.html">Home</a>
+    <a href="activities.html">Activities</a>
+    <a href="assesments.html">Assesments</a>
+	<a href="about.html">About</a>
+	</div>
+
+  <div style="width:500px; margin:auto; position:relative;">
+    <audio controls loop style="width:100%;">
+    <source src="lil uzi vert - watch this (Pluggnb Remix) (slowed + reverb).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  </div>
