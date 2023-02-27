@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activities4Kids</title>
+  <style>
+
+.slider-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+      .slider-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+        border-radius: 10px;
+      }
+
+      .slider {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+      }
+
+      .slider-inner {
+        width: 2000px;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        transition: left 1s ease-in-out;
+      }
+
+
+.slide {
+  width: 500px;
+  height: 300px;
+  float: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slide-animation 32s infinite;
+  animation-timing-function: linear;
+  margin: 0 auto; /* center the slide horizontally */
+}
+
+@keyframes slide-animation {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 0;
+  }
+  50% {
+    left: -500px;
+  }
+  75% {
+    left: -500px;
+  }
+  100% {
+    left: -1000px;
+  }
+}
+
+      .slide img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+
+      .slide h2 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .slide p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+    body {
+    background: url("templeofpixels.jpg");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+    }	  
+	
+    .sidenav {
+      height: 100%;
+      width: 199px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color:rgba(0, 0, 0, 0.5);
+      overflow-x: hidden;
+      padding-top: 20px;
+	  border-radius: 0 10px 10px 0;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+	  text-align: center;
+    }
+
+    .sidenav a:hover {
+      color: #303030;
+    }
+	
+  </style>
+  <script>
+    function toggleNav() {
+      var nav = document.getElementById("sidenav");
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
+      } else {
+        nav.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div dy styleid="sidenav" class="sidenav">
+    <a href="index.html">Home</a>
+    <a href="activities.html">Activities</a>
+    <a href="assesments.html">Assesments</a>
+	  <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+	</div>
+
+  <div style="width:500px; margin:auto; position:relative;">
+    <audio controls loop style="width:100%;">
+    <source src="lil uzi vert - watch this (Pluggnb Remix) (slowed + reverb).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  </div>
+
+  <div class="slider-container">
+    <div class="slider-background"></div>
+    <div class="slider">
+      <div class="slider-inner">
+        <div class="slide">
+          <img src="image1.jpg" alt="Image 1">
+          <h2 style="color: rgb(216, 40, 40);">Image 1 Title</h2>
+          <p style="color: rgb(133, 25, 25);">Image 1 Description</p>
+        </div>
+        <div class="slide">
+          <img src="image2.jpg" alt="Image 2">
+          <h2 style="color: rgb(216, 40, 40);">Image 2 Title</h2>
+          <p style="color: rgb(133, 25, 25);">Image 2 Description</p>
+        </div>
+        <div class="slide">
+          <img src="image3.jpg" alt="Image 3">
+          <h2 style="color: rgb(216, 40, 40);">Image 3 Title</h2>
+          <p style="color: rgb(133, 25, 25);">Image 3 Description</p>
+        </div>
+        <div class="slide">
+          <img src="image4.jpg" alt="Image 4">
+          <h2 style="color: rgb(216, 40, 40);">Image 4 Title</h2>
+          <p style="color: rgb(133, 25, 25);">Image 4 Description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const slider = document.querySelector('.slider');
+    const sliderInner = document.querySelector('.slider-inner');
+    const slides = document.querySelectorAll('.slide');
+    const slideWidth = slides[0].offsetWidth;
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      sliderInner.style.left = -1 * currentIndex * slideWidth + 'px';
+    }, 3000);
+  </script>
+</body>
+</html>
