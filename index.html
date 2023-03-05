@@ -3,6 +3,15 @@
 <head>
   <title>Activities4Kids</title>
   <style>
+
+body {
+    margin: auto;
+    width: 640px; 
+    padding: 50px;
+    font-family: "Poppins", sans-serif;
+    color: #2E475D;   
+    } 
+    
     body {
     background: url("templeofpixels.jpg");
 	  background-repeat: no-repeat;
@@ -34,7 +43,27 @@
     .sidenav a:hover {
       color: #303030;
     }
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 45px;
+      color: red;
+      text-align: center;
+      margin-top: 75px;
+    }
 	
+
+    h1 {
+    color:#000000;
+    text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+    size: 10px;
+    }
+
+    button {
+  display: block;
+  margin: 0 auto;
+}
+
   </style>
   <script>
     function toggleNav() {
@@ -45,17 +74,28 @@
         nav.style.display = "block";
       }
     }
+
+    function FullscreenCloaked() {
+var win = window.open()
+var url = "https://marcunblocks.github.io/activities4fun/assesments.html" //this is the link of the website u want to be fullscreen
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+}
+
   </script>
 </head>
 <body>
   <div dy styleid="sidenav" class="sidenav">
     <a href="index.html">Home</a>
-    <a href="activities.html">Activities</a>
-    <a href="assesments.html">Assesments</a>
+    <a href="games.html">Games</a>
+    <a href="websites.html">Websites</a>
 	  <a href="about.html">About</a>
     <a href="partners.html">Partners</a>
 	</div>
-
 
   <div style="width:500px; margin:auto; position:relative;">
     <audio controls loop style="width:100%;">
@@ -63,3 +103,6 @@
   Your browser does not support the audio element.
   </audio>
   </div>
+
+  <h1 style="color: red;">Webservers</h1>
+  <button onclick= "FullscreenCloaked()">Proxy 1 (About Blank Cloaking)</button>

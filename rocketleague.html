@@ -76,6 +76,17 @@
         nav.style.display = "block";
       }
     }
+
+    function FullscreenCloaked() {
+var win = window.open()
+var url = "https://gg-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if1dv@07d1c1d18e532c3433ee83c54eb24e07177b1876/z83pf8n/rocket-league-2d.xml" //this is the link of the website u want to be fullscreen
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+}
   </script>
 </head>
 <body>
@@ -95,12 +106,8 @@
   </audio>
   </div>
 
- <div class="centered">
-  <widgetbot
-  server="1027794530113699882"
-  channel="1079302668952010753"
-  width="800"
-  height="600"
-></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+  <div class="centered">
+<iframe src="https://gg-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if1dv@07d1c1d18e532c3433ee83c54eb24e07177b1876/z83pf8n/rocket-league-2d.xml" width="900px" height="675"></iframe>
 </div>
+<br>
+<button onclick= "FullscreenCloaked()">Fullscreen</button>
